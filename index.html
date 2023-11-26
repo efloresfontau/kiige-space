@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Kiige space - Home</title>
@@ -14,7 +17,7 @@
         <!-- Brand name-->
         <a href="#"><h1>KIIGE SPACE</h1></a>
         <!-- Menú nav-->        
-        <nav >
+        <nav class = "header-nav">
             <ul class = "nav_links">
                 <!-- Los diferentes links a nuestros pages-->
                 <li><a href="./pages/booking.html">BOOKING</a></li>
@@ -32,16 +35,24 @@
     </header>
 
     <!-- Main container -->
-    <main>
-        <!-- Carousel de imagenes con go to action-->
+    <main>          
         <section class="carousel-section" aria-label="Carousel de imagenes con go to action">
-            <div class="carousel-container">
-                <!--<img src="images/space-1.avif" alt="This image shows the café local from KIIGE SPACE"> -->
-                <div class="button-container">
-                    <a href="pages/menu.html"><button>OUR MENU</button></a>
-                    <a href="pages/booking.html"><button>BOOK NOW</button></a>
-                    
+            <div id="carouselSpaces" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" data-bs-pause = "false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="images/space-1.avif" alt="Kiige Café Space">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/space-2.avif"  alt="Kiige Coworking space">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="images/space-3.jpg"  alt="Kiige Chill-out space">
+                    </div>
                 </div>
+            </div>
+            <div class="button-container">
+                <a href="pages/menu.html"><button>OUR MENU</button></a>
+                <a href="pages/booking.html"><button>BOOK NOW</button></a>      
             </div>
         </section>
         <!-- Sección de coworking, music and cofee -->
@@ -160,5 +171,7 @@
             </h6>
         </div>
     </footer>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

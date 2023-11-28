@@ -14,24 +14,32 @@
 <body>
     <!-- Header: A la izquierda el brand name. En el centro el nav y a la derecha icono de cuenta y de compra -->
     <header id = "fakeheader" class = "header-indice">
-        <!-- Brand name-->
-        <a href="#"><h1>KIIGE SPACE</h1></a>
-        <!-- Menú nav-->        
-        <nav class = "header-nav">
-            <ul class = "nav_links">
-                <!-- Los diferentes links a nuestros pages-->
-                <li><a href="./pages/booking.html">BOOKING</a></li>
-                <li><a href="./pages/space.html">SPACE</a></li>
-                <li><a href="./pages/menu.html">MENU</a></li>
-                <li><a href="./pages/shop.html">SHOP</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><h1>KIIGE SPACE</h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                        <style>svg{fill:beige}</style>
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/booking.html">BOOKING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/space.html">SPACE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./pages/shop.html">SHOP</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <!-- iconos de compra y cuenta -->
-        <div class="btn-container">
-            <a class="cta" href="#"><button class="user-btn"><i class="fa fa-user"></i></button><i></i></a>
-            <a class="cta" href="#"><button class="cart-btn"><i class="fa fa-shopping-cart"></i></button><i></i></a>
-            <a class="cta" href="#"><button class="menu-btn"><i class="fa fa-bars"></i></button><i></i></a>
-        </div>
     </header>
 
     <!-- Main container -->

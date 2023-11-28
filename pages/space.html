@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="../css/style.css">
@@ -14,85 +15,97 @@
 <body>
     <!-- Header: Se pretende un Logo con el título a la izquierda y un nav con links a las pages-->
     <header id = header class = "header-indice">
-        <a href="../index.html"><h1>KIIGE SPACE</h1></a>
-        <!-- Menú nav-->        
-        <nav >
-            <ul class = "nav_links">
-                <!-- Los diferentes links a nuestros pages-->
-                <li><a href="booking.html">BOOKING</a></li>
-                <li><a href="space.html">SPACE</a></li>
-                <li><a href="menu.html">MENU</a></li>
-                <li><a href="shop.html">SHOP</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md w-100">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"><h1>KIIGE SPACE</h1></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
+                        <style>svg{fill:beige}</style>
+                        <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
+                    </svg>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link"  href="booking.html">BOOKING</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="space.html">SPACE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="menu.html">MENU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">SHOP</a>
+                    </li>
+                </ul>
+            </div>
         </nav>
-        <div class="btn-container">
-            <a class="cta" href="#"><button class="user-btn"><i class="fa fa-user"></i></button><i></i></a>
-            <a class="cta" href="#"><button class="cart-btn"><i class="fa fa-shopping-cart"></i></button><i></i></a>
-            <a class="cta" href="#"><button class="menu-btn"><i class="fa fa-bars"></i></button><i></i></a>
-        </div>
     </header>
     <!-- Contenido de todo nuestro sitio. Primero haremos una imagen y un párrafo lateral-->
     <main>
-        <section class = "coworking-space">
-            <div class = "coworking-grid-container">
-                <div class = "coworking-image-container"></div>
-                <div class = "gotoaction-container">
-                    <article class = "gotoaction" aria-label="Images and information about our coworking space">
-                        <h3 class = "title-gotoaction">
-                            COWORKING
-                        </h3>
-                        <p class = "text-gotoaction">
-                            Discover a world of productivity in our coworking space! With modern design, 
-                            ultra-fast connections, and all-inclusive services, 
-                            we provide the perfect environment to unleash your creativity. 
-                            Join the community of successful professionals today and take your work to the next level.
-                        </p>
-                        <article>
-                            <a href="../pages/booking.html"><button class = "gotoaction-button">BOOK NOW</button></a>
+        <section class = "space-section">
+            <section class = "coworking-space">
+                <div class = "coworking-grid-container">
+                    <div class = "coworking-image-container"></div>
+                    <div class = "gotoaction-container">
+                        <article class = "gotoaction" aria-label="Images and information about our coworking space">
+                            <h3 class = "title-gotoaction">
+                                COWORKING
+                            </h3>
+                            <p class = "text-gotoaction">
+                                Discover a world of productivity in our coworking space! With modern design, 
+                                ultra-fast connections, and all-inclusive services, 
+                                we provide the perfect environment to unleash your creativity. 
+                                Join the community of successful professionals today and take your work to the next level.
+                            </p>
+                            <article>
+                                <a href="../pages/booking.html"><button class = "gotoaction-button">BOOK NOW</button></a>
+                            </article>
+    
                         </article>
-
-                    </article>
-
+    
+                    </div>
+    
                 </div>
-
-            </div>
-        </section>
-
-        <section class = "cafe-space" aria-label="Images of our café">
-            <div class = "cafe-grid-container">
-                <div class = "cafe-image-container">
-                    <div class = "cafe-gotoaction-container">
-                        <h3 class = "title-gotoaction">CAFÉ</h3>
-                        <article class = "gotoaction">
-                            <a href="../pages/menu.html"><button class = "gotoaction-button">OUR MENU</button></a>
-                        </article>
+            </section>
+    
+            <section class = "cafe-space" aria-label="Images of our café">
+                <div class = "cafe-grid-container">
+                    <div class = "cafe-image-container">
+                        <div class = "cafe-gotoaction-container">
+                            <h3 class = "title-gotoaction">CAFÉ</h3>
+                            <article class = "gotoaction">
+                                <a href="../pages/menu.html"><button class = "gotoaction-button">OUR MENU</button></a>
+                            </article>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
-        <!-- Sección del chillout-->
-        <section class = "chillout-space" aria-label="Images and information about our chill-out">
-            <div class = "chillout-grid-container">
-                <div class = "gotoaction-container">
-                    <article class = "gotoaction">
-                        <h3 class = "title-gotoaction">
-                            CHILL OUT
-                        </h3>
-                        <p class = "text-gotoaction">
-                            Indulge in the ultimate chill-out experience with our curated collection of ambient tunes.
-                            Elevate your relaxation with soothing melodies and seamless beats. 
-                            Dive into a world of tranquility by purchasing your favorite tracks now. Let the music guide you to serenity. 
-                            Click, relax, and enjoy your perfect chill-out vibes instantly!
-                        </p>
-                        <article>
-                            <a href="../pages/shop.html"><button class = "gotoaction-button">BUY MUSIC</button></a>
+            </section>
+            <!-- Sección del chillout-->
+            <section class = "chillout-space" aria-label="Images and information about our chill-out">
+                <div class = "chillout-grid-container">
+                    <div class = "gotoaction-container">
+                        <article class = "gotoaction">
+                            <h3 class = "title-gotoaction">
+                                CHILL OUT
+                            </h3>
+                            <p class = "text-gotoaction">
+                                Indulge in the ultimate chill-out experience with our curated collection of ambient tunes.
+                                Elevate your relaxation with soothing melodies and seamless beats. 
+                                Dive into a world of tranquility by purchasing your favorite tracks now. Let the music guide you to serenity. 
+                                Click, relax, and enjoy your perfect chill-out vibes instantly!
+                            </p>
+                            <article>
+                                <a href="../pages/shop.html"><button class = "gotoaction-button">BUY MUSIC</button></a>
+                            </article>
                         </article>
-                    </article>
+                    </div>
+                    <div class = "chillout-image-container"></div>
                 </div>
-                <div class = "chillout-image-container"></div>
-            </div>
-            
-            
+                
+                
+            </section>
         </section>
     </main>
     <!-- Footer: Se pretende un apartado  de sponsors, mapa del local y formulario de contacto-->
@@ -149,5 +162,6 @@
             </h6>
         </div>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

@@ -1,0 +1,606 @@
+@use "../1-settings/variables";
+@use "../2-tools/mixins";
+@forward "./footer";
+@forward "./header";
+@forward "./typography";
+
+
+//box
+.c-box {
+    padding: 1.63rem;
+    background: rgba(variables.$primary-color, 1);
+    text-align: center;
+    margin: variables.$spacing;
+    color: variables.$text-color;
+    height: 100%;
+    min-height: 400px;
+}
+
+
+//button
+.c-btn {
+    height: 60px;
+    width: 180px;
+    display: inline-block;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-style: solid;
+    border-color: white;
+    padding: 15px 30px;
+    color: white;
+    margin: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+
+    &--primary {
+        background: variables.$primary-color;
+        color: variables.$text-color;
+    }
+
+    &--primary:hover,
+    &--primary:focus {
+    background: rgba(variables.$background-darker-color,0.9);
+    color: variables.$primary-color;
+    border-color: variables.$border-primary-color;
+    }
+
+    &:hover,
+    &:focus {
+        background: rgba(variables.$background-darker-color,0.9);
+        color: variables.$primary-color;
+        border-color: variables.$border-primary-color;
+    }
+}
+
+
+
+//cover
+.c-cover-background {
+    background-attachment: fixed;
+    background-color: variables.$background-color;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: variables.$text-color;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    
+    &--fvh {
+        height: 100vh;
+    }
+
+    &--cafe {        
+        background: url(../images/space-1.avif) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &--chillout {
+        background: url(../images/space-3.jpg) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+
+    &--coworking {
+        background: url(../images/space-2.avif) no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+}
+
+//carousel
+.c-carousel {
+    height: 100vh;
+
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        filter: blur(1px);
+    }
+}
+.carousel,
+.carousel-inner,
+.carousel-item,
+.carousel-item .active{
+    width: 100%;
+    height: 100%;
+
+}
+
+//briefing section
+.c-briefing {
+    margin: 0 auto;
+    &__title
+    {
+        padding: variables.$spacing;
+        color: variables.$text-dark-color;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__grid {
+        gap: variables.$spacing;
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        overflow: hidden;
+        width: 100%;
+
+        @include mixins.breakpoint('lg') { 
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+}
+
+//music section
+.c-fav-music {
+    max-width: variables.$max-width-section;
+    height: 100%;
+
+    &__child {
+        height: 400px;
+        width: 320px;
+        box-sizing: content-box;
+        transition: all 1s ease-in-out;
+
+        @include mixins.breakpoint('xl'){ width: 300px;}
+        @include mixins.breakpoint('lg'){ width: 360px;}
+        @include mixins.breakpoint('md'){ width: 450px;}
+        @include mixins.breakpoint('sm'){ width: 410px;}
+        @include mixins.breakpoint('xs'){ width: 320px;}
+    }
+
+    &__title{
+        color: variables.$primary-color;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+
+.c-fav-menu {
+    height: 100%;
+    max-width: variables.$max-width-section;
+    &__title{
+        color: variables.$primary-color;
+        height: 100%;
+        width: 100%;
+        text-align: center;
+    }
+
+}
+
+//menu section
+.c-menu-review {
+    box-sizing: content-box;
+    transition: all 0.3s;
+    height: 325px;
+    width: 320px;
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+
+
+    &__image {
+        transition: .5s ease;
+        border-radius: 5px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        transition: .5s ease;
+        @include mixins.breakpoint('md'){ opacity: 0.3;}
+    }
+
+    &__box {
+        width: 100%;
+        transition: .5s ease;
+        opacity: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        overflow: hidden;
+
+        @include mixins.breakpoint('md'){ opacity: 1;}
+    }
+
+    &:hover &__box{
+        opacity: 1;
+    }
+
+    &:hover &__image{
+        opacity: 0.3;
+    }
+
+    &__text {
+        font-size: 18px;
+        text-wrap: wrap;
+        text-align: center;
+    }
+
+    @include mixins.breakpoint('xl'){ width: 300px;}
+    @include mixins.breakpoint('lg'){ width: 360px;}
+    @include mixins.breakpoint('md'){ width: 450px;}
+    @include mixins.breakpoint('sm'){ width: 410px;}
+    @include mixins.breakpoint('xs'){ width: 320px;}
+
+}
+
+
+/*SECCIÓN BOOKING*/
+
+.c-booking{
+    width: 100%;
+}
+
+
+.c-form {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(variables.$background-darker-color, 0.8);
+    box-shadow: 0 4px 8px rgba(30, 30, 30, 0.3);
+    padding: 10px;
+    border-radius: 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+    &__title {
+        text-align: center;
+        color: rgba(201, 202, 202, 0.842);
+        top:50%;
+    }
+    &__row {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        text-align: left;
+        gap: 10px;
+
+        @include mixins.breakpoint('xs') 
+        { 
+            display: flex; 
+            flex-direction: column;
+        }
+    }
+
+    &__input-container{
+        flex-direction: column;
+        text-align: left;
+        width: 100%;
+
+        @include mixins.breakpoint('sm') { top:55%;}
+    }
+
+    & form {
+        padding-left: 20px;
+        padding-right: 20px;
+        text-align: left;
+        background: none;
+        min-width: 800px;
+        width: 100%;
+
+        @include mixins.breakpoint('md') { min-width: 580px;}
+        @include mixins.breakpoint('sm') { min-width: 400px;}
+        @include mixins.breakpoint('xs') { min-width: 300px;}
+
+    }
+}
+
+
+
+
+
+
+/* SECCION MENÚ*/
+
+.c-menu-links {
+    background-color: variables.$primary-color;
+    padding-top: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 50vh;
+
+    @include mixins.breakpoint('lg') { flex-wrap: wrap;}
+    @include mixins.breakpoint('sm') {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__child{
+        display: flex;
+        margin: 50px;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+
+    &__title{
+        color: rgba(variables.$text-dark-color, 0.3);
+        font-weight: 600;
+        font-size: 32px;
+
+        @include mixins.breakpoint('lg') { font-size: variables.$fs-title-s;}
+    }
+
+    &__list{
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        text-align: center;
+        gap: 10px;
+    }
+
+    & a{
+        font-size: variables.$fs-title-m;
+        font-weight: 600;
+        text-wrap: nowrap;
+        text-decoration: underline;
+
+        @include mixins.breakpoint('lg') { font-size: variables.$fs-title-s;}
+    }
+
+    & a:hover,
+    & a:active,
+    & a:focus   
+    {
+        color: variables.$secondary-color;
+    }
+}
+
+.c-menu-images {
+
+    height:50vh;
+    
+    &__grid{
+        height: 100%;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 5px;
+
+        @include mixins.breakpoint('sm') { 
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @include mixins.breakpoint('xs') { 
+            grid-template-columns: 100%;
+            grid-template-rows: 100%;
+        }
+    }
+
+    &__item{
+        overflow: hidden;
+    }
+
+    &__image{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: 1;
+        transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    }
+
+    &__image:hover{
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+/*SECCIÓN DE SHOP*/
+
+.c-shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+
+    &__grid {
+        display: grid;
+        width: 1440px;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        text-align: center;
+        gap: 20px;
+        margin: 20px;
+    }
+}
+
+
+.c-shop-filters {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: variables.$spacing-s;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: variables.$spacing-s;
+
+    
+
+
+    &__list{
+        display: flex;
+        justify-content: center;
+        width: 100%;
+
+    }
+
+
+    &__link{
+        width: 100%;
+        font-size: variables.$fs-menu;
+        font-weight: 700;
+        padding: 20px;
+
+    }
+}
+
+.c-product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    filter: drop-shadow(2px 4px 6px black);
+    text-align: center;
+    border-radius:12px;
+    padding: 20px;
+    box-sizing: content-box;
+    height: auto;
+    gap:5px;
+
+    &__info{
+        padding: variables.$spacing-s;
+        width: 100%;
+        align-items: center;
+        gap: 5px;
+    }
+
+    &__name{
+        font-size: variables.$fs-title-s;
+        color: variables.$secondary-color;
+        font-weight: 700;
+    }
+
+    &__price{
+        text-align: center;
+        
+        font-size: variables.$fs-title-s;
+        font-weight: 800;
+    }
+
+    &__image{
+        height: 300px;
+        width: 300px;
+    }
+
+    &__add
+    {
+        display: flex;
+        align-items: baseline;
+        justify-content: space-around;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s ease-in-out;
+        max-height: 30px;
+        overflow: hidden;
+        max-width: 400px;
+    }
+
+    &:hover  &__add {
+        border: solid 2px variables.$secondary-color;
+        width: 100%;
+        border-radius: 15px;
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.c-spaces {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    gap: variables.$spacing-s;
+
+}
+.c-coworking {
+    padding: variables.$spacing-s variables.$spacing-s 0 variables.$spacing-s;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 1fr;
+        gap: variables.$spacing-s;
+        min-height: 100%;
+
+        @include mixins.breakpoint('lg') {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+
+.c-cafe {
+    width: 100%;
+
+    padding-left: variables.$spacing-s;
+    padding-right: variables.$spacing-s;
+
+    &__grid{
+        position: relative;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        gap: variables.$spacing-s;
+        min-height: 33vh;
+    }
+}
+
+.c-chillout {
+    width: 100%;
+    padding: 0 variables.$spacing-s variables.$spacing-s variables.$spacing-s;
+    gap: variables.$spacing-s;
+
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        grid-template-rows: 1fr;
+        gap: 15px;
+        min-height: 33vh;
+
+        @include mixins.breakpoint('lg') {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+    }
+}
+
+
+.c-gta {
+    display: flex;
+    flex-direction: column;
+    gap: variables.$spacing-s;
+    padding: variables.$spacing-s;
+    background-color: rgba(202, 184, 102, 0.548);
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    &__title{
+        font-size: variables.$fs-title-m;
+        font-weight: 700;
+    }
+
+    &__text{
+        color: variables.$secondary-color;
+        font-size: variables.$fs-lead;
+        text-wrap: wrap;
+    }
+
+}
+
+/*Space*/
+
+.cafe-grid-container,
+.chillout-grid-container
+{
+    display: flex;
+    flex-direction: column;
+}

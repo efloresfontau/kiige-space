@@ -1,0 +1,15 @@
+@use "../1-settings/variables";
+
+body {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    background-color: variables.$background-color;
+    color: variables.$text-color;
+    font-family: variables.$font-family-text;
+    font-size: variables.$fs-body;
+    line-height: 1.8;
+
+    &:-webkit-scrollbar {
+        display: none;
+    }
+}

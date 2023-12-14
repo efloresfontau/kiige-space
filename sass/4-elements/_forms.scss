@@ -1,0 +1,34 @@
+@use "../1-settings/variables";
+
+label {
+    color: rgba(167, 136, 71, 0.8);
+    font-weight: 600;
+}
+
+input[type=text],
+input[type=email],
+input[type=date],
+input[type=time],
+input[type=number],
+textarea {
+    background-color: white;
+    color: variables.$text-dark-color;
+    border: solid 2px rgba(167, 136, 71, 0.8);
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+    
+input[type=submit] {
+    width: 100%;
+    font-weight: 700;
+    background-color: rgba(167, 136, 71, 0.8);
+    border: solid 2px rgb(167, 136, 71);
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+    
+input[type=submit]:hover {
+    background-color: rgb(167, 136, 71);
+}

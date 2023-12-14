@@ -1,0 +1,74 @@
+@use "../1-settings/variables";
+
+//footer
+.c-footer {
+    position: relative;
+    bottom: 0;
+    height: auto;
+    width: 100%;
+    color: rgba(230, 230, 230, 0.7);
+
+    &__container{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: space-evenly;
+        background: #000;
+    }
+    &__brand{
+        padding-top: 20px;
+        font-size: 32px;
+        font-weight: 800;
+        color: variables.$text-color;
+    }
+
+    &__info{
+        display: table-row;
+    }
+    &__info-box
+    {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: start;
+        padding: 20px;
+    }
+    
+    &__info-child 
+    {
+        padding: variables.$spacing-s;
+    }
+    
+
+    &__social-container {
+        background-color: #000;
+        display: flex;
+        gap: variables.$spacing-s;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+    }
+
+    &__social-icon img {
+        width: 32px;
+        height: 32px;
+    }
+
+    &__social-icon:hover {
+        transform: scale(1.1);
+    }
+
+    &__copyright {
+        display: flex;
+        justify-content: center;
+        background-color: variables.$background-darker-color;
+    }
+
+    & h4 {
+        margin-bottom: variables.$spacing-s;
+    }
+}
+

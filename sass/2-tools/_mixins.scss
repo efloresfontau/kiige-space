@@ -1,0 +1,31 @@
+@use "../1-settings/variables";
+
+@mixin justify($vertical-align: center) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: $vertical-align;
+    justify-content: space-between;
+}
+
+@mixin justify-center($vertical-align: center) {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: $vertical-align;
+    justify-content: center;
+}
+
+@mixin to-block{
+    display: block;
+    align-items: center;
+    text-align: center;
+}
+
+@mixin breakpoint($user-value) {
+    @if map-has-key(variables.$breakpoints, $user-value) {
+        @media (max-width: map-get(variables.$breakpoints, $user-value)){
+            @content;
+        }
+    }@else{
+        @error "Error, the following time #{$user-value} is not defined yet";
+    }
+}

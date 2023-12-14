@@ -1,0 +1,48 @@
+/*MEDIA QUERIES
+max-widths = [1400, 996, 768, 576, 450]
+*/
+@use "../1-settings/variables";
+@use "../2-tools/mixins";
+
+
+
+
+.u-hidden {
+    display: none !important;
+}
+
+
+.u-hidden--xl{
+    @include mixins.breakpoint('xl'){
+        display: none !important;
+    }
+}
+
+
+.u-hidden--lg{
+    @include mixins.breakpoint('lg'){
+        display: none !important;
+    }
+}
+.u-hidden--md{
+    @include mixins.breakpoint('md'){
+        display: none !important;
+    }
+}
+
+.u-hidden--sm{
+    @include mixins.breakpoint('sm'){
+        display: none !important;
+    }
+}
+
+.u-hidden--xs{
+    @include mixins.breakpoint('xs'){
+        display: none !important;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,11 @@
+@use "../1-settings/variables";
+
+a {
+    color: variables.$text-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: variables.$primary-color;
+    }
+}

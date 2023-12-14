@@ -1,0 +1,21 @@
+@use "../1-settings/variables";
+
+
+.c-lead {
+    font-size: variables.$fs-lead;
+    line-height: 1.65;
+}
+
+.c-title {
+    font-size: variables.$fs-title-l;
+    padding: variables.$spacing-s;
+    width: 100%;
+    color: variables.$text-dark-color;
+    font-weight: 700;
+}
+
+.c-parraph {
+    font-size: variables.$fs-title-s;
+    font-weight: 700;
+    color: variables.$text-dark-color;
+}

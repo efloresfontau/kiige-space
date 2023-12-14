@@ -1,0 +1,83 @@
+
+@use "../1-settings/variables";
+@use "../2-tools/mixins";
+
+//Header
+    
+.c-header {
+    background-color: variables.$background-primary-color;
+    border-bottom: solid 1px;
+    border-color: variables.$border-primary-color;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    z-index: variables.$z-menu;
+    top: 0;
+    width: 100%;
+    opacity: 1;
+
+    &__brand{
+        color: variables.$text-color;
+        font-weight: 600;
+        @include mixins.breakpoint('md') { font-size: variables.$fs-title-m; }
+    }
+
+    &__links{
+        font-weight: 500;
+        color: variables.$text-color;
+        font-size: variables.$fs-menu;
+        padding: variables.$spacing-s;
+    }
+
+    &__links:hover,
+    &__links:active,
+    &__links:focus{
+        color: variables.$secondary-color;
+    }
+
+}
+    
+/*FAKE HEADER*/
+.c-fake-header {
+    background-color: transparent;
+    border-color: variables.$border-color;
+    backdrop-filter: blur(2px);
+    border-bottom: solid 1px;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    width: 100%;
+    opacity: 0.9;
+
+    &__brand{
+        color: variables.$text-color;
+        font-weight: 600;
+        padding: 0;
+        @include mixins.breakpoint('md') { font-size: variables.$fs-title-m; }
+    }
+
+    &__links{
+        font-weight: 500;
+        color: variables.$text-color;
+        font-size: variables.$fs-menu;
+        padding: variables.$spacing-s;
+    }
+
+    &__links:hover,
+    &__links:active,
+    &__links:focus{
+        color: variables.$secondary-color;
+    }
+
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}

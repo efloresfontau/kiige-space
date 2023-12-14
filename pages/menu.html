@@ -14,29 +14,33 @@
 </head>
 <body>
     <!-- Header: Se pretende un Logo con el título a la izquierda y un nav con links a las pages-->
-    <header id = header class = "header-indice">
+    <header id = header class = "c-header">
         <nav class="navbar navbar-expand-md w-100">
             <div class="container-fluid">
-                <a class="navbar-brand" href="../index.html"><h1>KIIGE SPACE</h1></a>
+                <a href="../index.html">
+                    <h1 class = "c-header__brand">
+                        KIIGE SPACE
+                    </h1>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                         <style>svg{fill:beige}</style>
                         <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
                     </svg>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
+                <div id="navbarNav" class="collapse navbar-collapse" >
+                <ul class="navbar-nav mx-auto o-ui-list o-ui-list--horizontal">
                     <li class="nav-item">
-                        <a class="nav-link" href="booking.html">BOOKING</a>
+                        <a class="c-header__links" href="booking.html">BOOKING</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="space.html">SPACE</a>
+                        <a class="c-header__links" href="space.html">SPACE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="menu.html">MENU</a>
+                        <a class="c-header__links" aria-current="page" href="menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="shop.html">SHOP</a>
+                        <a class="c-header__links" href="shop.html">SHOP</a>
                     </li>
                 </ul>
             </div>
@@ -45,95 +49,97 @@
     <!-- Contenido de todo nuestro sitio. Primero haremos una imagen y un párrafo lateral-->
     <main>
         <!--Sección de links para la carta-->
-        <section class = "link-section">
-            <div class = "link-container">
-                <h2 class = "language-title">CAS</h2>
-                <ul class = "link-list">
+        <section class = "c-menu-links">
+            <div class = "c-menu-links__child">
+                <h2 class = "c-menu-links__title">CAS</h2>
+                <ul class = "c-menu-links__list">
                     <a href="#">Para Comer</a>
                     <a href="#">Para beber</a>
                 </ul>
             </div>
-            <div class="link-container">
-                <h2 class = "language-title">EN</h2>
-                <ul class = "link-list">
+            <div class="c-menu-links__child">
+                <h2 class = "c-menu-links__title">EN</h2>
+                <ul class = "c-menu-links__list">
                     <a href="#">To Eat</a>
                     <a href="#">To Drink</a>
                 </ul>
             </div>  
-            <div class="link-container">
-                <h2 class = "language-title">CAT</h2>
-                <ul class = "link-list">
+            <div class="c-menu-links__child">
+                <h2 class = "c-menu-links__title">CAT</h2>
+                <ul class = "c-menu-links__list">
                     <a href="#">Per Menjar</a>
                     <a href="#">Per Beure</a>
                 </ul>
             </div>  
-            <div class="link-container">
-                <h2 class = "language-title">FR</h2>
-                <ul class = "link-list">
+            <div class="c-menu-links__child">
+                <h2 class = "c-menu-links__title">FR</h2>
+                <ul class = "c-menu-links__list">
                     <a href="#">Pour Manger</a>
                     <a href="#">Pour Boire</a>
                 </ul>
             </div>  
         </section>
-        <section class = "menu-images-section">
-            <div class = "menu-grid">
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-1.jpeg" alt="plate 1">
+        
+        <section class = "c-menu-images">
+            <div class = "c-menu-images__grid">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-1.jpeg" alt="plate 1">
                 </div>
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-2.jpg" alt="plate 2">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-2.jpg" alt="plate 2">
                 </div>
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-2.webp" alt="plate 3">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-2.webp" alt="plate 3">
                 </div>
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-5.avif" alt="plate 4">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-5.avif" alt="plate 4">
                 </div>
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-1.avif" alt="plate 4">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-1.avif" alt="plate 4">
                 </div>
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-2.avif" alt="plate 2">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-2.avif" alt="plate 2">
                 </div>
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-3.avif" alt="plate 3">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-3.avif" alt="plate 3">
                 </div>
-                <div class = "img-container">
-                    <img class = "image-menu" src="../images/plate-4.avif" alt="plate 1">
+                <div class = "c-menu-images__item">
+                    <img class = "c-menu-images__image" src="../images/plate-4.avif" alt="plate 1">
                 </div>
             </div>
         </section>
     </main>
-    <!-- Footer: Se pretende un  apartado de sponsors, mapa del local y formulario de contacto-->
-    <footer id = footer>
+    <!-- Footer: Se pretende un apartado de sponsors, mapa del local y formulario de contacto-->
+    <footer class = "c-footer" id = "footer">
         <!-- CAJA#1 SPONSORS-->
-        <div class = footer-container>
-            <div class = logo-container>
-                <a href="#"><h1>KIIGE SPACE</h1></a>
+        <div class = "c-footer__container">
+            <div>
+                <a href="#">
+                    <h1 class = "c-footer__brand">KIIGE SPACE</h1>
+                </a>
             </div>
 
-            <div class = info-grid>
-                <div class = info-row>
-                    <div class = child-info>
+            <div class = "c-footer__info">
+                <div class = "c-footer__info-box">
+                    <div class = "c-footer__info-child">
                         <h4>SCHEDULE</h4>
                         <p>Monday to friday - 08:00 - 19:00H</p>
                         <p>Weekends - 08:00 - 13:00H </p>  
                         <p>Telephone +34 93X X70 XX6</p>
                         <p>Whatsapp at +34 X00 X9X X8X</p>
                     </div>
-                    <div class = child-info>
+                    <div class = "c-footer__info-child">
                         <h4>LINKS OF INTEREST</h4>
                         <p>Contact</p>
                         <p>Blog</p>  
                         <p>Newsletter</p>
                         <p>Work with us</p>
                     </div>
-                    <div class = child-info>
+                    <div class = "c-footer__info-child">
                         <h4>ADDRESS</h4>
                         <p>Carrer de Nomen Recordo, 10,</p>
                         <p>08002 - Barcelona</p>
-                        <a class = footer-address 
-                        href="https://www.google.com/maps?ll=41.385106,2.183646&z=13&t=m&hl=es-ES&gl=US&mapclient=embed&cid=3999420746233810142">
+                        <a href="https://www.google.com/maps?ll=41.385106,2.183646&z=13&t=m&hl=es-ES&gl=US&mapclient=embed&cid=3999420746233810142">
                             <img src="../images/address-kiige.JPG" alt="Dirección sobre info">
                         </a>
                     </div>
@@ -141,18 +147,18 @@
 
             </div>
         </div>
-        <div class = social-row>
-            <div class = social-icon>
+        <div class = "c-footer__social-container">
+            <div class = "c-footer__social-icon">
                 <a href=""><img src="../images/bxl-instagram.svg" alt="Instagram"></a>
             </div>
-            <div class = social-icon>
+            <div class = "c-footer__social-icon">
                 <a href=""><img src="../images/bxl-facebook-circle.svg"  alt="Facebook"></a>
             </div>
-            <div class = social-icon>
+            <div class = "c-footer__social-icon">
                 <a href=""><img src="../images/bxl-youtube.svg"  alt="Youtube"></a>
             </div>
         </div>
-        <div class="copyright-container">
+        <div class="c-footer__copyright">
             <h6>
                 © 2023 KIIGE SPACE
             </h6>

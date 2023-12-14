@@ -1,0 +1,10 @@
+/* max-widths = [1400, 996, 768, 576, 450]*/
+
+$breakpoints: (
+    'xs': 450px,
+    "sm": 576px,
+    "md": 768px,
+    "lg": 996px,
+    "xl": 1400px
+) !default;
+

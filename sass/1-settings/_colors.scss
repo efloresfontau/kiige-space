@@ -1,0 +1,23 @@
+$_golden_dark: rgb(150,120,52);
+$_golden_mid: #FFC745;
+$_golden_light: rgb(212, 193, 108);
+$_beige: beige;
+$_gray_light: #1c1c1c;
+$_black: #000;
+$_white: #fff;
+$_brown: brown;
+
+
+$primary-color: $_golden_dark;
+$secondary-color: rgba($_golden_light, 0.9);
+
+$background-color: $_gray_light;
+$background-primary-color: $_golden_dark;
+$background-darker-color: $_black;
+
+$text-color: $_beige;
+$text-dark-color: $_black;
+
+$border-color: $_beige;
+$border-primary-color: $_golden_light;
+

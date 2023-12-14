@@ -5,37 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./images/favicon.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Kiige space - Home</title>
 </head>
 <body>
     <!-- Header: A la izquierda el brand name. En el centro el nav y a la derecha icono de cuenta y de compra -->
-    <header id = "fakeheader" class = "header-indice">
+    <header id = "header" class = "c-fake-header">
         <nav class="navbar navbar-expand-md w-100">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#"><h1>KIIGE SPACE</h1></a>
+                <a href="#">
+                    <h1 class = "c-fake-header__brand">
+                        KIIGE SPACE
+                    </h1>
+                </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 448 512">
                         <style>svg{fill:beige}</style>
                         <path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z"/>
                     </svg>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav mx-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="./pages/booking.html">BOOKING</a>
+                <div id="navbarNav" class="collapse navbar-collapse" >
+                <ul class="navbar-nav mx-auto o-ui-list o-ui-list--horizontal" >
+                    <li class = "nav-item">
+                        <a class="c-fake-header__links" href="./pages/booking.html">BOOKING</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/space.html">SPACE</a>
+                        <a class="c-fake-header__links" href="./pages/space.html">SPACE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/menu.html">MENU</a>
+                        <a class="c-fake-header__links" href="./pages/menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./pages/shop.html">SHOP</a>
+                        <a class="c-fake-header__links" href="./pages/shop.html">SHOP</a>
                     </li>
                 </ul>
             </div>
@@ -44,142 +46,168 @@
 
     <!-- Main container -->
     <main>          
-        <section class="carousel-section" aria-label="Carousel de imagenes con go to action">
+        <!--Carousel de bootstrap-->
+        <section class="c-carousel o-relative-container o-relative-container--fvh" aria-label="Carousel de imagenes con go to action">
             <div id="carouselSpaces" class="carousel slide" data-bs-ride="carousel" data-bs-interval="6000" data-bs-pause = "false">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img src="images/space-1.avif" alt="Kiige Café Space">
+                        <img class = "c-carousel__image" src="images/space-1.avif" alt="Kiige Café Space">
                     </div>
                     <div class="carousel-item">
-                        <img src="images/space-2.avif"  alt="Kiige Coworking space">
+                        <img class = "c-carousel__image" src="images/space-2.avif"  alt="Kiige Coworking space">
                     </div>
-                    <div class="carousel-item">
-                        <img src="images/space-3.jpg"  alt="Kiige Chill-out space">
+                    <div class="carousel-item g_carousel__item">
+                        <img class = "c-carousel__image" src="images/space-3.jpg"  alt="Kiige Chill-out space">
                     </div>
                 </div>
             </div>
-            <div class="button-container">
-                <a href="pages/menu.html"><button>OUR MENU</button></a>
-                <a href="pages/booking.html"><button>BOOK NOW</button></a>      
+            <div class="o-absolute-container o-absolute-container--centered">
+                <a href="pages/menu.html">
+                    <button class = "c-btn">OUR MENU</button>
+                </a>
+                <a href="pages/booking.html">
+                    <button class = "c-btn">BOOK NOW</button>
+                </a>      
             </div>
         </section>
-        <!-- Sección de coworking, music and cofee -->
-        <section class = "briefing-section" aria-label = "Sección de resumen del espacio y concepto de Kiige">
-            <div class="briefing-container">
-                <h2 class = "briefing-header">Coffee, Coworking and Music</h2>
-                <div class = "briefing-content-container">
-                    <div class="briefing-text-container">
-                        <p>
-                            Immerse yourself in the tranquility of studying with aromatic coffee.
-                        </p>
-                        <p>
-                            Indulge in a chill-out corner with vinyl records and relaxing music to disconnect and recharge. 
-                        </p>
-                        <p>
-                            Discover the perfect balance between productivity and relaxation in our cozy environment.
-                        </p>
-                    </div>
-                    <div class="briefing-image-container">
+
+        <!-- Sección de resumen-->
+        <section aria-label = "Sección de resumen del espacio y concepto de Kiige">
+            <div class= "c-box o-column-container--centered">
+                <div class="c-briefing">
+                    <h2 class = "c-briefing__title c-title">Coffee, Coworking and Music</h2>
+                    <div class = "c-briefing__grid">
+                        <div class ="o-column-container">
+                            <p class = "c-parraph">
+                                Immerse yourself in the tranquility of studying with aromatic coffee.
+                            </p>
+                            <p class = "c-parraph">
+                                Indulge in a chill-out corner with vinyl records and relaxing music to disconnect and recharge. 
+                            </p>
+                            <p class = "c-parraph">
+                                Discover the perfect balance between productivity and relaxation in our cozy environment.
+                            </p>
+                        </div>
+                        <div class="c-cover-background c-cover-background--cafe u-hidden--sm">
+                        </div>
                     </div>
                 </div>
             </div>
             
-        </section>
+        </section >
         <!-- Sección de música con reproductor de algunos de los vinilos del chillout-->
-        <section class ="music" aria-label="Sección con algunas de las canciones que se encuentran en los vinilos de nuestro chill-out ">
-            <h2>Music that drives us crazy</h2>
-            <div class = "music-parent">
-                <iframe class = "music-child-1"  style="border-radius:12px" src="https://open.spotify.com/embed/track/7HrcZQ1PRCQKaDglbzo7Ed?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <iframe class = "music-child-2"  style="border-radius:12px" src="https://open.spotify.com/embed/track/4PdpO0mc8uPi2OiUjcR5O7?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <iframe class = "music-child-3"  style="border-radius:12px" src="https://open.spotify.com/embed/track/5kLg9cdm7LayfkyaxVZKdD?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-                <iframe class = "music-child-4"  style="border-radius:12px" src="https://open.spotify.com/embed/track/3QKJELWORZZ7rUZDWeMWSA?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <section class ="o-column-container" aria-label="Sección con algunas de las canciones que se encuentran en los vinilos de nuestro chill-out ">
+            <div clas = "c-fav-music">
+                <h2 class = "c-fav-music__title c-title">Music that drives us crazy</h2>
+                <div class = "o-row-container">
+                    <iframe class = "c-fav-music__child"  src="https://open.spotify.com/embed/track/7HrcZQ1PRCQKaDglbzo7Ed?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe class = "c-fav-music__child u-hidden--md"  src="https://open.spotify.com/embed/track/4PdpO0mc8uPi2OiUjcR5O7?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe class = "c-fav-music__child u-hidden--lg"  src="https://open.spotify.com/embed/track/5kLg9cdm7LayfkyaxVZKdD?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe class = "c-fav-music__child u-hidden--xl"  src="https://open.spotify.com/embed/track/3QKJELWORZZ7rUZDWeMWSA?utm_source=generator&theme=0" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                </div>
             </div>
         </section>
         <!-- Sección de menú con imagenes de los platos más valorados-->
-        <section class ="menu" aria-label = "Sección con imagenes de los platos más valorados de Kiige">
-            <h2>Our most valued dishes</h2>
-            <div class="menu-parent">
-                <article class="menu-child-1">
-                    <img src="./images/plate-1.avif" alt="Imagen del plato más valorado">
-                    <div class="review-box">
-                        <p class = "review-text"> Desde la primera mordida hasta la última, cada bocado era una deliciosa sorpresa.</p>
-                    </div>
-                </article>
-                <article class="menu-child-2">
-                    <img src="./images/plate-2.avif" alt="Imagen del segundo plato más valorado">
-                    <div class="review-box">
-                        <p class = "review-text"> La combinación de ingredientes crujientes, cremosos y tiernos proporcionaba una experiencia multisensorial que elevaba la calidad del plato.</p>
-                    </div>
-                </article>
-                <article class="menu-child-3">
-                    <img src="./images/plate-3.avif" alt="Imagen del tercer plato más valorado">
-                    <div class="review-box">
-                        <p class = "review-text"> El chef logró fusionar ingredientes familiares de una manera novedosa y emocionante, creando algo que se sentía fresco y único.</p>
-                    </div>
-                </article>
-                <article class="menu-child-4">
-                    <img src="./images/plate-4.avif" alt="Imagen del cuarto plato más valorado">
-                    <div class="review-box">
-                        <p class = "review-text">  Este plato no solo alimentó nuestro cuerpo, sino que también alimentó nuestra apreciación por la creatividad culinaria.</p>
-                    </div>
-                </article>
+        <section class ="o-column-container" aria-label = "Sección con imagenes de los platos más valorados de Kiige">
+            <div class = "c-fav-menu">
+                <h2 class = "c-fav-menu__title c-title">Our most valued dishes</h2>
+                <div class="o-row-container">
+                    <article class="c-menu-review">
+                        <img class= "c-menu-review__image" src="./images/plate-1.avif" alt="Imagen del plato más valorado">
+                        <div class="c-menu-review__box">
+                            <p class = "c-menu-review__text"> 
+                                From the first bite to the last, 
+                                each mouthful was a delicious surprise
+                            </p>
+                        </div>
+                    </article>
+                    <article class="c-menu-review u-hidden--md">
+                        <img class="c-menu-review__image" src="./images/plate-2.avif" alt="Imagen del segundo plato más valorado">
+                        <div class="c-menu-review__box">
+                            <p class = "c-menu-review__text"> 
+                                The combination of crunchy, creamy, 
+                                and tender ingredients provided a 
+                                multisensory experience that elevated the dish's quality.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="c-menu-review u-hidden--lg">
+                        <img class ="c-menu-review__image" src="./images/plate-3.avif" alt="Imagen del tercer plato más valorado">
+                        <div class="c-menu-review__box">
+                            <p class = "c-menu-review__text"> 
+                                The chef successfully blended familiar 
+                                ingredients in a novel and exciting way, 
+                                creating something that felt fresh and unique.
+                            </p>
+                        </div>
+                    </article>
+                    <article class="c-menu-review u-hidden--xl">
+                        <img class="c-menu-review__image" src="./images/plate-4.avif" alt="Imagen del cuarto plato más valorado">
+                        <div class="c-menu-review__box">
+                            <p class = "c-menu-review__text">  
+                                This dish not only nourished our bodies but
+                                also fed our appreciation for culinary creativity.
+                            </p>
+                        </div>
+                    </article>
+                </div>
             </div>
             
         </section>
         
     </main>
     <!-- Footer: Se pretende un apartado de sponsors, mapa del local y formulario de contacto-->
-    <footer id = footer>
+    <footer class = "c-footer" id = "footer">
         <!-- CAJA#1 SPONSORS-->
-        <div class = footer-container>
-            <div class = logo-container>
-                <a href="#"><h1>KIIGE SPACE</h1></a>
+        <div class = "c-footer__container">
+            <div>
+                <a href="#">
+                    <h1 class = "c-footer__brand">KIIGE SPACE</h1>
+                </a>
             </div>
 
-            <div class = info-grid>
-                <div class = info-row>
-                    <div class = child-info>
-                        <h4>SCHEDULE</h4>
+            <div class = "c-footer__info">
+                <div class = "c-footer__info-box">
+                    <div class = "c-footer__info-child">
+                        <h3>SCHEDULE</h4>
                         <p>Monday to friday - 08:00 - 19:00H</p>
                         <p>Weekends - 08:00 - 13:00H </p>  
                         <p>Telephone +34 93X X70 XX6</p>
                         <p>Whatsapp at +34 X00 X9X X8X</p>
                     </div>
-                    <div class = child-info>
-                        <h4>LINKS OF INTEREST</h4>
+                    <div class = "c-footer__info-child">
+                        <h3>LINKS OF INTEREST</h4>
                         <p>Contact</p>
                         <p>Blog</p>  
                         <p>Newsletter</p>
                         <p>Work with us</p>
                     </div>
-                    <div class = child-info>
-                        <h4>ADDRESS</h4>
+                    <div class = "c-footer__info-child">
+                        <h3>ADDRESS</h4>
                         <p>Carrer de Nomen Recordo, 10,</p>
                         <p>08002 - Barcelona</p>
-                        <a class = footer-address 
-                        href="https://www.google.com/maps?ll=41.385106,2.183646&z=13&t=m&hl=es-ES&gl=US&mapclient=embed&cid=3999420746233810142">
-                            <img src="./images/address-kiige.JPG" alt="Dirección sobre info">
+                        <a class = "c-web-info__address" href = "https://www.google.com/maps?ll=41.385106,2.183646&z=13&t=m&hl=es-ES&gl=US&mapclient=embed&cid=3999420746233810142">
+                            <img src="./images/address-kiige.JPG" alt="Dirección del lugar">
                         </a>
                     </div>
                 </div>
-
             </div>
         </div>
-        <div class = social-row>
-            <div class = social-icon>
-                <a href=""><img src="./images/bxl-instagram.svg" alt="Instagram"></a>
+        <div class = "c-footer__social-container">
+            <div class = "c-footer__social-icon">
+                <a href=""><img src="./images/bxl-instagram.svg" alt="Link de Instagram"></a>
             </div>
-            <div class = social-icon>
-                <a href=""><img src="./images/bxl-facebook-circle.svg"  alt="Facebook"></a>
+            <div class = "c-footer__social-icon">
+                <a href=""><img src="./images/bxl-facebook-circle.svg"  alt="Link de Facebook"></a>
             </div>
-            <div class = social-icon>
-                <a href=""><img src="./images/bxl-youtube.svg"  alt="Youtube"></a>
+            <div class = "c-footer__social-icon">
+                <a href=""><img src="./images/bxl-youtube.svg"  alt="Link de Youtube"></a>
             </div>
         </div>
-        <div class="copyright-container">
-            <h6>
+        <div class="c-footer__copyright">
+            <p>
                 © 2023 KIIGE SPACE
-            </h6>
+            </p>
         </div>
     </footer>
     

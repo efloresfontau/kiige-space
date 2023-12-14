@@ -580,7 +580,9 @@ input[type=submit]:hover {
   gap: 1rem;
 }
 .o-column-container--centered {
+  flex-direction: column;
   text-align: center;
+  justify-content: center;
   margin: 1.5rem;
 }
 
@@ -787,13 +789,13 @@ input[type=submit]:hover {
 }
 
 .c-box {
+  margin: 1.6rem;
   padding: 1.63rem;
   background: #967834;
   text-align: center;
-  margin: 1.6rem;
   color: beige;
+  overflow: hidden;
   height: 100%;
-  min-height: 400px;
 }
 
 .c-btn {
@@ -826,7 +828,6 @@ input[type=submit]:hover {
 }
 
 .c-cover-background {
-  background-attachment: fixed;
   background-color: #1c1c1c;
   background-position: center;
   background-repeat: no-repeat;
@@ -836,6 +837,9 @@ input[type=submit]:hover {
   justify-content: center;
   text-align: center;
   align-items: center;
+}
+.c-cover-background--minHeight {
+  min-height: 400px;
 }
 .c-cover-background--fvh {
   height: 100vh;
@@ -1305,7 +1309,7 @@ input[type=submit]:hover {
 @media (max-width: 996px) {
   .c-coworking__grid {
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -1338,7 +1342,7 @@ input[type=submit]:hover {
 @media (max-width: 996px) {
   .c-chillout__grid {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 }
 

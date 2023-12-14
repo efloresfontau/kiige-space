@@ -7,13 +7,14 @@
 
 //box
 .c-box {
+    margin: variables.$spacing;
     padding: 1.63rem;
     background: rgba(variables.$primary-color, 1);
     text-align: center;
-    margin: variables.$spacing;
+
     color: variables.$text-color;
+    overflow:hidden;
     height: 100%;
-    min-height: 400px;
 }
 
 
@@ -56,7 +57,6 @@
 
 //cover
 .c-cover-background {
-    background-attachment: fixed;
     background-color: variables.$background-color;
     background-position: center;
     background-repeat: no-repeat;
@@ -67,6 +67,10 @@
     justify-content: center;
     text-align: center;
     align-items: center;
+
+    &--minHeight{
+        min-height: 400px ;
+    }
     
     &--fvh {
         height: 100vh;
@@ -531,7 +535,7 @@
 
         @include mixins.breakpoint('lg') {
             display: flex;
-            flex-direction: column;
+            flex-direction: column-reverse;
         }
     }
 }
@@ -566,7 +570,7 @@
 
         @include mixins.breakpoint('lg') {
             display: flex;
-            flex-direction: column-reverse;
+            flex-direction: column;
         }
     }
 }

@@ -1032,14 +1032,6 @@ input[type=submit]:hover {
 }
 
 /*SECCIÓN BOOKING*/
-.c-booking {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  margin: 1.6rem auto;
-  overflow: hidden;
-}
-
 .c-form {
   margin: auto;
   background-color: rgba(0, 0, 0, 0.8);

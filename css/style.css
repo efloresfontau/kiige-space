@@ -1034,11 +1034,14 @@ input[type=submit]:hover {
 /*SECCIÓN BOOKING*/
 .c-booking {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: 1.6rem auto;
+  overflow: hidden;
 }
 
 .c-form {
-  display: flex;
-  flex-direction: column;
+  margin: auto;
   background-color: rgba(0, 0, 0, 0.8);
   box-shadow: 0 4px 8px rgba(30, 30, 30, 0.3);
   padding: 10px;
@@ -1046,6 +1049,11 @@ input[type=submit]:hover {
   justify-content: center;
   align-items: center;
   gap: 20px;
+}
+@media (max-width: 576px) {
+  .c-form__title {
+    font-size: 1.5625rem;
+  }
 }
 .c-form__title {
   text-align: center;
@@ -1057,23 +1065,19 @@ input[type=submit]:hover {
   width: 100%;
   align-items: center;
   text-align: left;
-  gap: 10px;
+  gap: 5px;
 }
 @media (max-width: 450px) {
   .c-form__row {
     display: flex;
     flex-direction: column;
+    gap: 0px;
   }
 }
 .c-form__input-container {
   flex-direction: column;
   text-align: left;
   width: 100%;
-}
-@media (max-width: 576px) {
-  .c-form__input-container {
-    top: 55%;
-  }
 }
 .c-form form {
   padding-left: 20px;

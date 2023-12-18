@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- Header: Se pretende un Logo con el título a la izquierda y un nav con links a las pages-->
-    <header id = header class = "c-fake-header">
+    <header id = header class = "c-header">
         <nav class="navbar navbar-expand-md w-100">
             <div class="container-fluid">
                 <a href="../index.html">
@@ -32,16 +32,16 @@
                 <div id="navbarNav" class="collapse navbar-collapse" >
                 <ul class="navbar-nav mx-auto o-ui-list o-ui-list--horizontal">
                     <li class="nav-item">
-                        <a class="c-fake-header__links" href="booking.html">BOOKING</a>
+                        <a class="c-header__links" href="booking.html">BOOKING</a>
                     </li>
                     <li class="nav-item">
-                        <a class="c-fake-header__links" href="space.html">SPACE</a>
+                        <a class="c-header__links" href="space.html">SPACE</a>
                     </li>
                     <li class="nav-item">
-                        <a class="c-fake-header__links" aria-current="page" href="menu.html">MENU</a>
+                        <a class="c-header__links" aria-current="page" href="menu.html">MENU</a>
                     </li>
                     <li class="nav-item">
-                        <a class="c-fake-header__links" href="shop.html">SHOP</a>
+                        <a class="c-header__links" href="shop.html">SHOP</a>
                     </li>
                 </ul>
             </div>
@@ -51,38 +51,40 @@
     <main>
         <section aria-label="Sección de booking para el espacio de coworking">
             <div class = "c-cover-background c-cover-background--fvh c-cover-background--coworking">
-                <article class ="c-form">
-                    <h1 class = "c-form__title">Book your space now</h1>
-                    <form action="#">
-                        <div class = "c-form__row">
-                            <div class="c-form__input-container">
-                                <label for="name">First Name:</label>
-                                <input placeholder="Name" type="text" id="name" name="name" required>
+                <div class = "c-booking">
+                    <article class ="c-form">
+                        <h1 class = "c-form__title">Book your space now</h1>
+                        <form action="#">
+                            <div class = "c-form__row">
+                                <div class="c-form__input-container">
+                                    <label for="name">First Name:</label>
+                                    <input placeholder="Name" type="text" id="name" name="name" required>
+                                </div>
+                                <div class="c-form__input-container">
+                                    <label for="surname">Last Name:</label>
+                                    <input placeholder="Surname" type="text" id= "surname" name = "surname" required>
+                                </div>
                             </div>
-                            <div class="c-form__input-container">
-                                <label for="surname">Last Name:</label>
-                                <input placeholder="Surname" type="text" id= "surname" name = "surname" required>
-                            </div>
-                        </div>
-                        <label for="people">Number of people:</label>
-                        <input placeholder="People" type="number" id="people" name="people" min="1" max="5" required>                       
-                        <br>
-                        <label for="date">Booking date:</label>
-                        <input type="date" name="date" id="date">
-                        <div class="c-form__row">
-                            <div class="c-form__input-container">
-                                <label for="start-time">Start time:</label>
-                                <input type="time" id="start-time"name="start-time" required>
-                            </div>
-                            <div class="c-form__input-container">
-                                <label for="duration">Duration:</label>
-                                <input placeholder="hours" type="number" id="duration" name="duration" min="1" max="8" required>
-                            </div>
-                        </div>                                              
-                        <input type="submit" value="BOOK NOW">
-                        <p>If you don't find availability, please sign up on the waiting list.</p>
-                    </form>
-                </article>
+                            <label for="people">Number of people:</label>
+                            <input placeholder="People" type="number" id="people" name="people" min="1" max="5" required>                       
+                            <br>
+                            <label for="date">Booking date:</label>
+                            <input type="date" name="date" id="date">
+                            <div class="c-form__row">
+                                <div class="c-form__input-container">
+                                    <label for="start-time">Start time:</label>
+                                    <input type="time" id="start-time"name="start-time" required>
+                                </div>
+                                <div class="c-form__input-container">
+                                    <label for="duration">Duration:</label>
+                                    <input placeholder="hours" type="number" id="duration" name="duration" min="1" max="8" required>
+                                </div>
+                            </div>                                              
+                            <input type="submit" value="BOOK NOW">
+                            <p>If you don't find availability, please sign up on the waiting list.</p>
+                        </form>
+                    </article>
+                </div>
             </div>
         </section>
     </main>

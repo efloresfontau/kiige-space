@@ -245,12 +245,17 @@
 
 .c-booking{
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: variables.$spacing auto;
+    overflow: hidden;
+    
 }
 
 
 .c-form {
-    display: flex;
-    flex-direction: column;
+
+    margin: auto;
     background-color: rgba(variables.$background-darker-color, 0.8);
     box-shadow: 0 4px 8px rgba(30, 30, 30, 0.3);
     padding: 10px;
@@ -258,6 +263,14 @@
     justify-content: center;
     align-items: center;
     gap: 20px;
+
+
+    @include mixins.breakpoint('sm') 
+    { 
+        &__title {
+            font-size: variables.$fs-title-m;
+        }
+    }
 
     &__title {
         text-align: center;
@@ -269,12 +282,13 @@
         width: 100%;
         align-items: center;
         text-align: left;
-        gap: 10px;
+        gap: 5px;
 
         @include mixins.breakpoint('xs') 
         { 
             display: flex; 
             flex-direction: column;
+            gap: 0px;
         }
     }
 
@@ -282,8 +296,6 @@
         flex-direction: column;
         text-align: left;
         width: 100%;
-
-        @include mixins.breakpoint('sm') { top:55%;}
     }
 
     & form {

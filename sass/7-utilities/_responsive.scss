@@ -1,41 +1,43 @@
-/*MEDIA QUERIES
-max-widths = [1400, 996, 768, 576, 450]
-*/
+
 @use "../1-settings/variables";
 @use "../2-tools/mixins";
 
 
 
-
+/*hidden utility*/
 .u-hidden {
     display: none !important;
 }
 
-
+/*hidden when breakpoint xl utility*/
 .u-hidden--xl{
     @include mixins.breakpoint('xl'){
         display: none !important;
     }
 }
 
-
+/*hidden when breakpoint lg utility*/
 .u-hidden--lg{
     @include mixins.breakpoint('lg'){
         display: none !important;
     }
 }
+
+/*hidden when breakpoint md utility*/
 .u-hidden--md{
     @include mixins.breakpoint('md'){
         display: none !important;
     }
 }
 
+/*hidden when breakpoint sm utility*/
 .u-hidden--sm{
     @include mixins.breakpoint('sm'){
         display: none !important;
     }
 }
 
+/*hidden when breakpoint xs utility*/
 .u-hidden--xs{
     @include mixins.breakpoint('xs'){
         display: none !important;

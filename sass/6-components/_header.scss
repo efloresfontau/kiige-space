@@ -71,6 +71,12 @@
         color: variables.$secondary-color;
     }
 
+    &:hover{
+        background-color: variables.$background-primary-color;
+        border-color: variables.$border-primary-color;
+        opacity: 1;
+    }
+
 }
 
 

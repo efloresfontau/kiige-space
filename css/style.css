@@ -455,6 +455,7 @@ template {
 }
 
 /* max-widths = [1400, 996, 768, 576, 450]*/
+/*body style*/
 body {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -468,6 +469,7 @@ body:-webkit-scrollbar {
   display: none;
 }
 
+/*headings styles*/
 h1,
 h2,
 h3,
@@ -505,6 +507,7 @@ a:hover, a:focus {
   color: rgb(150, 120, 52);
 }
 
+/*labels and inputs styles*/
 label {
   color: rgba(167, 136, 71, 0.8);
   font-weight: 600;
@@ -539,6 +542,11 @@ input[type=submit]:hover {
 }
 
 /* max-widths = [1400, 996, 768, 576, 450]*/
+/*mixin with flex box behaviour and space between justification*/
+/*mixin with flex box behaviour and center justification*/
+/*mixin with block box behaviour and centered*/
+/*breakpoint mixin to use media queries*/
+/*Flex container object with centered an aligned modificators*/
 .o-flex-container {
   width: 100%;
   display: flex;
@@ -557,6 +565,8 @@ input[type=submit]:hover {
   align-items: start;
 }
 
+/*Flex row container object, centered an aligned 
+    With flex-wrap modifier*/
 .o-row-container {
   display: flex;
   flex-direction: row;
@@ -570,6 +580,8 @@ input[type=submit]:hover {
   flex-wrap: wrap;
 }
 
+/*Flex column container object and aligned 
+    With centered modifier*/
 .o-column-container {
   width: 100%;
   display: flex;
@@ -586,6 +598,8 @@ input[type=submit]:hover {
   margin: 1.5rem;
 }
 
+/*block container object
+    With full-height modifier*/
 .o-block-container {
   display: block;
   align-items: center;
@@ -596,6 +610,7 @@ input[type=submit]:hover {
   height: 100%;
 }
 
+/*relative container object */
 .o-relative-container {
   position: relative;
   width: 100%;
@@ -603,6 +618,8 @@ input[type=submit]:hover {
   margin: 0;
 }
 
+/*absolute container object
+    with centered modifier*/
 .o-absolute-container {
   position: absolute;
   top: 0;
@@ -618,6 +635,7 @@ input[type=submit]:hover {
   align-items: center;
 }
 
+/*grid container object with 2/1 column format*/
 .o-grid-container {
   display: grid;
   grid-gap: 1.6rem;
@@ -625,6 +643,8 @@ input[type=submit]:hover {
   overflow: hidden;
 }
 
+/*Unordered list object
+    with horizontal modifier*/
 .o-ui-list {
   padding: 0;
   margin: 0;
@@ -637,6 +657,10 @@ input[type=submit]:hover {
   gap: 1rem;
 }
 
+/*mixin with flex box behaviour and space between justification*/
+/*mixin with flex box behaviour and center justification*/
+/*mixin with block box behaviour and centered*/
+/*breakpoint mixin to use media queries*/
 .c-footer {
   position: relative;
   bottom: 0;
@@ -760,6 +784,11 @@ input[type=submit]:hover {
 .c-fake-header__links:hover, .c-fake-header__links:active, .c-fake-header__links:focus {
   color: rgba(212, 193, 108, 0.9);
 }
+.c-fake-header:hover {
+  background-color: rgb(150, 120, 52);
+  border-color: rgb(212, 193, 108);
+  opacity: 1;
+}
 
 .navbar-toggler {
   border: none;
@@ -769,6 +798,7 @@ input[type=submit]:hover {
   box-shadow: none;
 }
 
+/*typography components*/
 .c-lead {
   font-size: 1.1875rem;
   line-height: 1.65;
@@ -1031,7 +1061,6 @@ input[type=submit]:hover {
   }
 }
 
-/*SECCIÓN BOOKING*/
 .c-form {
   margin: auto;
   background-color: rgba(0, 0, 0, 0.8);
@@ -1095,7 +1124,7 @@ input[type=submit]:hover {
   }
 }
 
-/* SECCION MENÚ*/
+/*menu links section*/
 .c-menu-links {
   background-color: rgb(150, 120, 52);
   padding-top: 50px;
@@ -1156,6 +1185,10 @@ input[type=submit]:hover {
   color: rgba(212, 193, 108, 0.9);
 }
 
+/*Menu images grid.
+    2x4 grid with images of the same size.
+    When hovering an image, adds a zoom and a fade out animation. 
+*/
 .c-menu-images {
   height: 50vh;
 }
@@ -1194,7 +1227,8 @@ input[type=submit]:hover {
   opacity: 0.7;
 }
 
-/*SECCIÓN DE SHOP*/
+/*Shop items grid
+*/
 .c-shop {
   display: flex;
   flex-wrap: wrap;
@@ -1212,6 +1246,8 @@ input[type=submit]:hover {
   margin: 20px;
 }
 
+/*Shop filter section
+*/
 .c-shop-filters {
   display: flex;
   flex-direction: row;
@@ -1234,6 +1270,12 @@ input[type=submit]:hover {
   padding: 20px;
 }
 
+/*Shop product component  
+    shows a product image,
+    a title and a price.
+    When hovering, shows a 
+    quantity display.
+*/
 .c-product {
   display: flex;
   flex-direction: column;
@@ -1292,6 +1334,10 @@ input[type=submit]:hover {
   gap: 1rem;
 }
 
+/*coworking space component  
+    1 row grid with a 2 / 1 column format
+    When breakpoint lg => changes to flex column reverse
+*/
 .c-coworking {
   padding: 1rem 1rem 0 1rem;
 }
@@ -1309,6 +1355,9 @@ input[type=submit]:hover {
   }
 }
 
+/*coffee space component  
+    1 row grid with a 1 column format
+*/
 .c-cafe {
   width: 100%;
   padding-left: 1rem;
@@ -1323,6 +1372,10 @@ input[type=submit]:hover {
   min-height: 33vh;
 }
 
+/*chillout space component  
+    1 row grid with a 1 / 2 column format
+    When breakpoint lg => changes to flex column
+*/
 .c-chillout {
   width: 100%;
   padding: 0 1rem 1rem 1rem;
@@ -1342,6 +1395,9 @@ input[type=submit]:hover {
   }
 }
 
+/*Go to action component  
+    shows a title, a description and a go to action button. 
+*/
 .c-gta {
   display: flex;
   flex-direction: column;
@@ -1363,44 +1419,48 @@ input[type=submit]:hover {
   text-wrap: wrap;
 }
 
-/*Space*/
+/*Grid container for cafe and chillout 
+*/
 .cafe-grid-container,
 .chillout-grid-container {
   display: flex;
   flex-direction: column;
 }
 
-/*MEDIA QUERIES
-max-widths = [1400, 996, 768, 576, 450]
-*/
+/*hidden utility*/
 .u-hidden {
   display: none !important;
 }
 
+/*hidden when breakpoint xl utility*/
 @media (max-width: 1400px) {
   .u-hidden--xl {
     display: none !important;
   }
 }
 
+/*hidden when breakpoint lg utility*/
 @media (max-width: 996px) {
   .u-hidden--lg {
     display: none !important;
   }
 }
 
+/*hidden when breakpoint md utility*/
 @media (max-width: 768px) {
   .u-hidden--md {
     display: none !important;
   }
 }
 
+/*hidden when breakpoint sm utility*/
 @media (max-width: 576px) {
   .u-hidden--sm {
     display: none !important;
   }
 }
 
+/*hidden when breakpoint xs utility*/
 @media (max-width: 450px) {
   .u-hidden--xs {
     display: none !important;

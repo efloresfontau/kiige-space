@@ -2,7 +2,7 @@
 @import "../2-tools/mixins";
 
 
-
+/*Flex container object with centered an aligned modificators*/
 .o-flex-container {
 
     width: 100%;
@@ -17,7 +17,8 @@
     }
 }
 
-
+/*Flex row container object, centered an aligned 
+    With flex-wrap modifier*/
 .o-row-container {
     display:flex;
     flex-direction: row;
@@ -33,7 +34,8 @@
     
 }
 
-
+/*Flex column container object and aligned 
+    With centered modifier*/
 .o-column-container {
     width: 100%;
     display: flex;
@@ -52,7 +54,8 @@
     }
 }
 
-
+/*block container object
+    With full-height modifier*/
 .o-block-container {
     @include to-block;
     width: 100%;
@@ -62,6 +65,7 @@
     }
 }
 
+/*relative container object */
 .o-relative-container {
     position: relative;
     width: 100%;
@@ -69,6 +73,8 @@
     margin: 0;
 }
 
+/*absolute container object
+    with centered modifier*/
 .o-absolute-container {
     position: absolute;
     top: 0;
@@ -85,6 +91,7 @@
     }
 }
 
+/*grid container object with 2/1 column format*/
 .o-grid-container {
     display: grid;
     grid-gap: variables.$spacing;

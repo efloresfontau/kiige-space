@@ -1,5 +1,6 @@
 @use "../1-settings/variables";
 
+/*mixin with flex box behaviour and space between justification*/
 @mixin justify($vertical-align: center) {
     display: flex;
     flex-wrap: wrap;
@@ -7,6 +8,7 @@
     justify-content: space-between;
 }
 
+/*mixin with flex box behaviour and center justification*/
 @mixin justify-center($vertical-align: center) {
     display: flex;
     flex-wrap: wrap;
@@ -14,12 +16,15 @@
     justify-content: center;
 }
 
+/*mixin with block box behaviour and centered*/
 @mixin to-block{
     display: block;
     align-items: center;
     text-align: center;
 }
 
+
+/*breakpoint mixin to use media queries*/
 @mixin breakpoint($user-value) {
     @if map-has-key(variables.$breakpoints, $user-value) {
         @media (max-width: map-get(variables.$breakpoints, $user-value)){
